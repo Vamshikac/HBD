@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS | Birthday Protocol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="scanline"></div>
+
+  <!-- SECTION 1: INTRO + CAKE -->
+  <section id="intro" class="screen">
+    <p class="tag">STARK INDUSTRIES // BIRTHDAY PROTOCOL</p>
+    <h1 class="glow">JARVIS ONLINE</h1>
+    <p id="boot" class="boot"></p>
+
+    <div id="cakeArea" class="hidden fade-in">
+      <div class="cake">
+        <div id="candles"></div>
+        <div class="tier t1"></div>
+        <div class="tier t2"></div>
+        <div class="tier t3"></div>
+      </div>
+      <button id="blowBtn" class="hud-btn">💨 BLOW THE CANDLES</button>
+    </div>
+
+    <div id="birthdayMsg" class="hidden fade-in">
+      <h2 class="glow">HAPPY 24TH BIRTHDAY, AKASH AKA IRON MAN 🦾</h2>
+      <p>Congratulations. You are officially 24.</p>
+      <p>Which means you're now <b class="gold">closer to 30 than 15.</b></p>
+      <p class="big">UNC UNC UNC UNC 💀</p>
+
+      <div class="panel">
+        <p class="tag">AGE ANALYSIS COMPLETE</p>
+        <p id="ageLine" class="status"></p>
+        <p id="proxLine" class="status warn"></p>
+      </div>
+
+      <button id="toWishBtn" class="hud-btn hidden">ACCESS STARK DATABASE →</button>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WISH -->
+  <section id="wish" class="screen hidden">
+    <p class="tag">⚠ INCOMING TRANSMISSION</p>
+    <h2 class="glow">JARVIS HAS ONE FINAL REQUEST</h2>
+    <div id="reactor" class="reactor"><div class="core"></div></div>
+    <h3>MAKE A WISH. ⭐</h3>
+    <button id="wishBtn" class="hud-btn">I HAVE MADE MY WISH</button>
+    <p id="wishMsg" class="boot"></p>
+  </section>
+
+  <!-- EVERYTHING BELOW UNLOCKS AFTER THE WISH -->
+  <div id="main" class="hidden">
+
+    <!-- SECTION 3: CAREER -->
+    <section id="career" class="screen">
+      <h2 class="glow">JARVIS CAREER ANALYSIS</h2>
+      <div class="panel">
+        <ul class="list stagger">
+          <li class="reveal">MBA: IN PROGRESS ✅</li>
+          <li class="reveal">CFA LEVEL I: CLEARED ✅</li>
+          <li class="reveal">TCS OFFER: SECURED ✅</li>
+          <li class="reveal">NAGPUR: INCOMING ⏳</li>
+          <li class="reveal">BETTER PACKAGE: STILL HUNTING 🔍</li>
+          <li class="reveal bad">HUMILITY: FILE NOT FOUND ❌</li>
+        </ul>
+      </div>
+      <p class="big reveal">Despite already having a job offer, Akash has decided that one salary package is simply not enough.</p>
+      <h2 class="danger reveal">🚨 URGENT CAREER ALERT 🚨</h2>
+      <h3 class="reveal">10 COMPANIES ARE CURRENTLY BEGGING AKASH TO JOIN THEM.</h3>
+    </section>
+
+    <!-- SECTION 4: OFFERS -->
+    <section id="offers" class="screen">
+    
+      <h2 class="glow">INCOMING OFFERS</h2>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <!-- SECTION 5: REPORT -->
+    <section id="report" class="screen">
+      <h2 class="glow">JARVIS MISSION COMPLETE</h2>
+      <div class="panel">
+        <ul class="list stagger">
+          <li class="reveal">🎂 AGE: 24</li>
+          <li class="reveal">🎓 MBA: IN PROGRESS</li>
+          <li class="reveal">📜 CFA LEVEL I: CLEARED</li>
+          <li class="reveal">💼 TCS OFFER: SECURED</li>
+          <li class="reveal">📍 NAGPUR: LOADING...</li>
+          <li class="reveal">💰 BETTER PACKAGE: STILL SEARCHING</li>
+          <li class="reveal">🏢 COMPANIES BEGGING: 10</li>
+          <li class="reveal">🧓 PROXIMITY TO 30: INCREASING RAPIDLY</li>
+          <li class="reveal bad">👑 HUMILITY: 0%</li>
+        </ul>
+      </div>
+      <div class="warning-box reveal">
+        ⚠ WARNING ⚠<br>EGO LEVELS EXCEED REACTOR CAPACITY.<br>RECOMMENDING IMMEDIATE ROAST.
+      </div>
+    </section>
+
+    <!-- SECTION 6: FINALE -->
+    <section id="finale" class="screen">
+      <h3 class="reveal">ANYWAY...</h3>
+      <h1 class="glow reveal">LIVE YOUR LIFE, BBG.</h1>
+      <h2 class="danger-big reveal">YOU'RE RUNNING OUT OF TIME. 💀</h2>
+      <p class="big reveal"><b>24 today.</b><br><b>30 is loading...</b></p>
+      <div class="bar reveal"><span></span></div>
+      <h2 class="glow reveal">❤️ HAPPY BIRTHDAY, AKASH AKA IRON MAN 🦾</h2>
+      <p class="tag reveal">— JARVIS</p>
+    </section>
+  </div>
+
+  <!-- MODAL -->
+  <div id="overlay" class="overlay">
+    <div class="modal">
+      <p class="tag">FICTIONAL OFFER // JARVIS SIMULATION</p>
+      <h2 id="mTitle" class="glow"></h2>
+      <div id="mBody"></div>
+      <div id="mResult" class="result"></div>
+      <div class="btn-row">
+        <button id="acceptBtn" class="hud-btn">ACCEPT OFFER</button>
+        <button id="closeBtn" class="hud-btn alt">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
